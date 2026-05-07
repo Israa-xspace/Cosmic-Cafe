@@ -1,0 +1,212 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color:white;
+    background-image: url("../imgs/galaxy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px 0;
+}
+th{
+    background-color: purple;
+}
+td, th {
+    padding: 20px;
+    border-bottom: 3px solid purple;
+}
+video {
+    margin-bottom: 50px
+}
+.order-btn {
+    padding: 15px 30px;
+    background-color: purple;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+.order-btn:hover{
+    opacity: 1;
+    box-shadow: 0 0 20 ;
+    background-color: #ffffff;
+    color: #df98fa;
+}
+.coffee-group {
+    position: relative;
+    padding-top: 20px;
+    width: fit-content;
+}
+.hot-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 2px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+.galaxy-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.galaxy-table th {
+    background-color: #df98fa;
+    color: black;
+    padding: 12px;
+    text-align: left;
+text-transform: uppercase;
+}
+.galaxy-table td {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+.galaxy-table tr:nth-child(even){
+    background-color: rgba(223,152,250,0.1);
+}
+form {
+    position: relative;
+    box-shadow: 2px 2px 10px #df98fa;
+    border: 1px solid #df98fa;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+}
+form input, form select, form-trxtarea,
+{
+    margin-bottom: 10px ;
+    display: block;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: 2px 2px 10px purple;
+    text-transform: uppercase;
+/* }
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap; */
+
+}
+.dt {
+    text-shadow: 2px 2px 10px purple;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #df98fa;
+}
+label {
+    letter-spacing: 2px; 
+    line-height: 1.8;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 14px ;
+    text-transform: uppercase;
+    cursor: pointer ;
+    position: relative;
+    color: white;
+}
+label::before {
+    content: "\2605";
+    margin-right: 8px;
+    color: #df98fa;
+    font-size: 1.2em;
+}
+label::after {
+    content: "";
+    position: absolute;
+    bottom: -8px ;
+    left: 0;
+    width: 100% ;
+    height: 2px ;
+    background-color: #df98fa;
+    box-shadow: 0 0 5px #df98fa;
+}
+h2 {
+    font-size: 32px ;
+    text-align: center;
+    text-shadow: 2px 2px 10px #df98fa;
+    letter-spacing: 3px;
+}
+.radio-label{
+    display: inline-block ;
+    vertical-align: middle;
+}
+::selection {
+    background-color: #df98fa;
+    color: black;
+}
+h2::first-letter{
+    font-size: 40px;
+    font-weight: bold;
+    color: #df98fa;
+    margin-right: 10px;
+    line-height: 1;
+    text-shadow: 0 0 10px #df98fa;
+    font-family: serif;
+}
+#main-content {
+    display: grid; 
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+    padding: 20px;
+    align-items: start;
+}
+tr{
+    transition: 0.1s; 
+}
+tr:hover {
+    transform: scale(1) rotate(2deg);
+    cursor: pointer;
+}
+@keyframes glow-pulse {
+0% {
+    box-shadow: 0 0 0px rgba(223,152,250, 0.4);
+}
+
+    50% {
+        box-shadow: 0 0 50px rgba(223,152,250,0.8);
+    }
+    100% {
+        box-shadow: 0 0 0px rgba(223,152,250,0.4);
+    }
+}
+#form-container {
+    animation: glow-pulse 3s infinite ease-in-out;
+}
+#form-container, table {
+    background: rgba(0, 0, 0, 0,3);
+    border-radius: 15px;
+}
+body{
+    backdrop-filter: blur(1px) 
+    brightness(0.8);
+}
+@media (max-width:768px) {
+    #main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}

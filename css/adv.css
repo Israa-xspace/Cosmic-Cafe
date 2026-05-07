@@ -1,0 +1,206 @@
+:root {
+    --primary-glow: #df98fa ;
+    --secondary-glow: #00d4ff;
+    --text-main: white  ;
+    --card-bg: rgba (255,255,255, 0.1) ;
+}
+body {
+    background-image: url("../imgs/galaxy.jpg" );
+    color: var(--text-main) ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+#main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+#form-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 40 auto; 
+    display: block;
+    float: none;
+}
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+.menu-card {
+    background: var(--card-bg);
+    backdrop-filter: blur (10px);
+    padding: 20px ;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.menu-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-glow);
+    box-shadow: 0 10px 20px rgba(223,152,250,0.2);
+    cursor: pointer
+}
+.menu-card h3 {
+    color: var(--primary-glow);
+    margin-bottom: 10px ;
+    overflow: hidden;
+    }
+.price {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.card-img {
+    width: 100%;     
+    height: 300px;    
+    object-fit: cover; /* الحركة دي بتخلي الصورة متتمطش وتفضل محتفظة بشكلها */
+    object-position: center;
+    background-color: rgba(0,0,0,0.3s);
+    border-radius: 15px 15px 0 0; 
+    margin-bottom: 15px;
+}
+.card-btn,.order-btn  {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px ;
+    background: transparent;
+    color: var(--primary-glow);
+    border: 1px solid var(--primary-glow) ;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.card-btn,.order-btn  :hover {
+    background: var(--primary-glow);
+    color: #000;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+#form-container label, #form-container p {
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 8px;
+}
+input {
+    border: 10px 1px solid rgba(255,255,255,0.2);
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-glow);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+nav ul{
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    gap: 20px;
+}
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: var(--primary-glow);
+    text-shadow: 0 0 10px var(--primary-glow);
+    transform: translateY(-3px);
+}
+.vid-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.vid-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.vid-overplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+footer{
+    margin-top: 50px;
+    padding: 40px;
+    background: rgba(10,10,42,0.8);
+    border-top: 1px solid var(--primary-glow);
+    text-align: center;
+}
+footer span {
+    color: var(--primary-glow);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.social-links a{
+    color: #00d4ff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(10,10,42,0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header h1{
+    font-size: 24px;
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
